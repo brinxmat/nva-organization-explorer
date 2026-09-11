@@ -1,0 +1,29 @@
+{
+  "name": "nva-organization-explorer",
+  "version": "0.1.0",
+  "description": "Static, RDF-aware explorer for NVA organisation data, deployable to GitHub Pages",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test --experimental-test-coverage --test-coverage-lines=100 --test-coverage-branches=100 --test-coverage-functions=100 'test/*.test.js'",
+    "lint": "eslint . --max-warnings 0",
+    "check": "npm run lint && npm test",
+    "build": "rm -rf dist && mkdir dist && cp index.html styles.css .nojekyll dist/ && cp -R src dist/src",
+    "serve": "python3 -m http.server 8000"
+  },
+  "license": "MIT",
+  "volta": {
+    "node": "24.21.0",
+    "npm": "11.19.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "eslint": "10.10.0",
+    "eslint-plugin-jsdoc": "64.3.9",
+    "globals": "17.12.0"
+  },
+  "engines": {
+    "node": "24.21.0",
+    "npm": "11.19.1"
+  }
+}
